@@ -30,7 +30,7 @@ Clone the repository:
 
 bash
 Copier
-git clone https://github.com/your-username/the-gossip-project.git
+git clone https://github.com/Guggs57/the-gossip-project.git
 cd the-gossip-project
 Install dependencies:
 
@@ -77,9 +77,8 @@ Contributing
 Feel free to fork the repo, create a branch, and submit a pull request!
 
 Authors
-Your Name
+Guggs57
 
-Your Partner’s Name
 
 License
 This project is licensed under the MIT License.
