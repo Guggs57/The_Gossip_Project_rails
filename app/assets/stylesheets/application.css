@@ -17,7 +17,7 @@ body {
 
 /* Navbar style */
 nav.navbar {
-  background-color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
   padding: 10px 0;
 }
@@ -51,13 +51,13 @@ header {
   width: 100%;
   z-index: 1000;
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Conteneur de titre */
 .title-container {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
@@ -77,7 +77,7 @@ header {
 
 /* Style des cards (potins) sur la page d'accueil */
 .card {
-  background-color: rgba(255, 255, 255, 0.5); /* Fond semi-transparent pour les cartes */
+  background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent pour les cartes */
   backdrop-filter: blur(10px); /* Flou léger pour mieux distinguer les cartes du fond */
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -115,7 +115,7 @@ header {
 
 /* Style du formulaire de création de potin */
 .form-container {
-  background-color: rgba(66, 49, 49, 0.85);  /* Fond semi-transparent */
+  background-color: rgba(66, 49, 49, 0.9);  /* Fond semi-transparent */
   padding: 30px;  /* Espacement autour du contenu du formulaire */
   border-radius: 10px;  /* Bordures arrondies */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Ombre portée pour mieux le détacher du fond */

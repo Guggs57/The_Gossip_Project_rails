@@ -5,17 +5,6 @@ The Gossip Project is a simple Rails app where users can view, create, and inter
 Features
 Homepage: Displays a welcome message and a list of gossips with author names and titles.
 
-Static Pages:
-
-Team: Information about the team.
-
-Contact: How to contact the team.
-
-Welcome: A personalized greeting based on the URL.
-
-Gossip Pages: Each gossip has a dedicated page displaying the title, content, author, and creation date.
-
-User Profiles: Each user has a profile page with their information.
 
 Installation
 Prerequisites
