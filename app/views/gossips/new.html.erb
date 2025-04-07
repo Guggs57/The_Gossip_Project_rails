@@ -1,0 +1,31 @@
+<div class="title-container">
+<h1>Créer un nouveau potin</h1>
+</div>
+<div class="form-container">
+  <%= form_with(model: @gossip, local: true) do |form| %>
+    <% if @gossip.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@gossip.errors.count, "error") %> prohibited this gossip from being saved:</h2>
+        <ul>
+          <% @gossip.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content %>
+      <%= form.text_area :content, class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

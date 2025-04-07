@@ -1,0 +1,42 @@
+<%= form_with(model: @user, local: true) do |form| %>
+  <% if @user.errors.any? %>
+    <div class="errors">
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- Champ pour le prénom -->
+  <div>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <!-- Champ pour le nom -->
+  <div>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <!-- Champ pour l'email -->
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <!-- Bouton de soumission -->
+  <div>
+    <%= form.submit "S'inscrire" %>
+  </div>
+<% end %>
+
+
+<% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+

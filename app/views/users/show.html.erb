@@ -1,0 +1,7 @@
+<h1>Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
+
+<p>Email : <%= @user.email %></p>
+<p>Âge : <%= @user.age %></p>
+<p>Description : <%= @user.description || 'Aucune description disponible' %></p>
+
+<%= link_to 'Retour aux potins', root_path %>  <!-- Lien vers la page d'accueil des potins -->
