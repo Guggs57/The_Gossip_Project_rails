@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
 
   # Routes pour les potins (gossips)
-  resources :gossips
+  resources :gossips do 
+    resources :likes 
+  end
+
 
   # Route racine (page d'accueil)
   root 'home#index'
