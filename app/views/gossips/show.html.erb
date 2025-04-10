@@ -8,3 +8,15 @@
 <%= link_to 'Voir le profil de l\'auteur', user_path(@gossip.user) %>
 
 <%= link_to 'Retour à la liste des potins', root_path %>
+
+<!-- Ajouter les boutons Modifier et Supprimer uniquement si l'utilisateur est connecté et est le propriétaire du potin -->
+<% if logged_in? && @gossip.user == current_user %>
+  <div class="mt-3">
+    <%= link_to 'Modifier', edit_gossip_path(@gossip), class: "btn btn-warning" %>
+    <%= form_with(model: @gossip, url: gossip_path(@gossip), method: :delete, local: true) do |form| %>
+  <%= form.submit 'Supprimer', class: 'btn btn-danger', data: { confirm: 'Êtes-vous sûr de vouloir supprimer ce potin ?' } %>
+<% end %>
+
+
+  </div>
+<% end %>

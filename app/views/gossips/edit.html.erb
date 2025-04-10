@@ -1,0 +1,31 @@
+<h1>Modifier le potin</h1>
+
+<%= form_with(model: @gossip, local: true) do |form| %>
+  <% if @gossip.errors.any? %>
+    <div class="errors">
+      <ul>
+        <% @gossip.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- Champ pour le titre -->
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <!-- Champ pour le contenu -->
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="centered-content">
+    <%= form.submit "Mettre à jour" %>
+  </div>
+<% end %>
+
+<%= link_to 'Retour à la liste des potins', root_path %>

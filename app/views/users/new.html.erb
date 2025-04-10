@@ -27,16 +27,20 @@
     <%= form.email_field :email %>
   </div>
 
+  <!-- Champ pour le mot de passe -->
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <!-- Champ pour la confirmation du mot de passe -->
+  <div>
+    <%= form.label :password_confirmation, "Confirmation du mot de passe" %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
   <!-- Bouton de soumission -->
   <div class="centered-content">
     <%= form.submit "S'inscrire" %>
   </div>
 <% end %>
-
-
-<% if notice %>
-  <div class="alert alert-success">
-    <%= notice %>
-  </div>
-<% end %>
-

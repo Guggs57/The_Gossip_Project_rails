@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  # Routes pour afficher les utilisateurs et leurs profils
+  get 'login', to: 'sessions#new', as: 'new_session'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
+
+  # Routes pour les utilisateurs
   resources :users, only: [:new, :create, :show]
 
   # Routes pour les potins (gossips)
-  resources :gossips, only: [:show, :new, :create]
-  
+  resources :gossips
 
   # Route racine (page d'accueil)
   root 'home#index'
@@ -12,7 +15,4 @@ Rails.application.routes.draw do
   # Autres pages statiques
   get '/team', to: 'pages#team'
   get '/contact', to: 'pages#contact'
-
-  # Route pour la page d'accueil personnalisée en fonction du prénom
-  get 'welcome/:first_name', to: 'welcome#show', as: 'welcome'
 end
